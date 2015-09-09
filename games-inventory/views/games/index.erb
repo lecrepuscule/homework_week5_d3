@@ -1,8 +1,8 @@
 <h2>Game</h2>
 
-<a class="btn" href="/artists/new">Add Game</a>
+<a class="btn" href="/games/new">Add Game</a>
 
-<div class="artists">
+<div class="games">
   <% @games.each do |game| %>
   <div class="row">
     <img src="<%= game.photo_url %>" alt="<%= game.name %> photo">
