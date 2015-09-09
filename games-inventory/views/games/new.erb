@@ -1,14 +1,23 @@
-<h2>New Artist</h2>
+<h2>New Game</h2>
 
-<form action="/artists" method="post">
-  <label for="artist[name]">Name:</label>
-  <input name="artist[name]">
+<form action="/games" method="post">
+  <label for="game[name]">Name:</label>
+  <input name="game[name]">
 
-  <label for="artist[photo_url]">Photo URL:</label>
-  <input name="artist[photo_url]">
+  <label for="game[photo_url]">Photo URL:</label>
+  <input name="game[photo_url]">
 
-  <label for="artist[nationality]">Nationality:</label>
-  <input name="artist[nationality]">
+  <label for="game[studio]">Studio:</label>
+  <input name="game[studio]"> 
+
+  <label for="game[genre]">Genre:</label>
+  <input name="game[genre]">   
+
+  <label for="game[release_date]">Release Date:</label>
+  <input name="game[release_date]">
+
+  <label for="game[rating]">Rating:</label>
+  <input name="game[rating]"> 
 
   <input type="submit" value="Create">
 </form>
