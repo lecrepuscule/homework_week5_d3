@@ -14,15 +14,15 @@ class GameSpot < Sinatra::Base
 
   # new
   get "/games/new" do
-    @new_game = Game.new
+    @game = Game.new
     erb(:"games/new")
   end
  
   # create
   post "/games" do
-    @new_game = Game.new(params[:game])
-    if @new_game
-      redirect("/games/#{@new_game.id}")
+    @game = Game.new(params[:game])
+    if @game.save
+      redirect("/games/#{@game.id}")
     else
       erb(:"games/new")
     end
@@ -41,7 +41,7 @@ class GameSpot < Sinatra::Base
   end
 
   # update
-  put "games/:id" do
+  post "games/:id" do
     @game = Game.find(params[:id])
     if @game.update_attributes(params[:game])
       redirect("games/#{@game.id}")
@@ -51,7 +51,7 @@ class GameSpot < Sinatra::Base
   end
   
   # delete
-  delete "/games/:id" do
+  post "/games/:id/delete" do
     @game = Game.find(params[:id])
     if @game.destroy
       redirect("/games")

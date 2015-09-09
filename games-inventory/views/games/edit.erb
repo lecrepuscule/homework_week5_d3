@@ -1,14 +1,14 @@
-<h2>Edit Artist</h2>
+<h2>Edit Game</h2>
 
-<form action='/artists/<%= "#{@artist.id}" %>' method="post">
-  <label for="artist[name]">Name:</label>
-  <input name="artist[name]" value='<%= "#{@artist.name}" %>'>
+<form action='/games/<%= "#{@game.id}" %>' method="post">
+  <label for="game[name]">Name:</label>
+  <input name="game[name]" value='<%= "#{@game.name}" %>'>
 
-  <label for="artist[photo_url]">Photo URL:</label>
-  <input name="artist[photo_url]" value='<%= "#{@artist.photo_url}" %>'>
+  <label for="game[photo_url]">Photo URL:</label>
+  <input name="game[photo_url]" value='<%= "#{@game.photo_url}" %>'>
 
-  <label for="artist[nationality]">Nationality:</label>
-  <input name="artist[nationality]" value='<%= "#{@artist.nationality}" %>'>
+  <label for="game[genre]">Genre:</label>
+  <input name="game[genre]" value='<%= "#{@game.genre}" %>'>
 
   <input type="submit" value="Create">
 </form>

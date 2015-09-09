@@ -4,6 +4,7 @@ body {
   background: #f1f4f6;
 }
 
+
 h1,h2,h3,h4,h5,h6 {
   margin: 0 0 20px;
 }
@@ -86,6 +87,7 @@ main ul {
 .artists .row img {
   float: left;
   max-height: 100px;
+  Max-wid: 100px;
 }
 
 .artists .row ul {
